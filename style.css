@@ -19,14 +19,21 @@ button{
 h2{
   font-size: 1rem;
   line-height: 1rem;
-  padding: 0 1.4rem;
+  margin-bottom: 1rem;
+}
+section{
+  padding: 1rem;
+  margin-top: 3rem;
+}
+a{
+  color: grey;
 }
 header {
     background: 
     linear-gradient(
       to top,
       rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0.6) 60%,
+      rgba(0, 0, 0, 0.7) 60%,
       rgba(0, 0, 0, 0.8) 100%
     ),
     url('assets/movies.jpeg') center/cover no-repeat;
@@ -55,7 +62,7 @@ header {
 
 .placeholder{
   text-align: center;
-  padding: 3rem 3rem 7.6rem 3rem ;
+  padding: 3rem 3rem 4rem 3rem ;
 }
 
 .ready p{
@@ -63,7 +70,7 @@ header {
 }
 
 .email input{
-  padding: 0.7rem;
+  padding: 0.8rem;
   background: none;
   border: 1px solid white;
   border-radius: 3px;
@@ -84,10 +91,9 @@ header {
 }
 
 .trending{
-  min-height: 100vh;
   position: relative;
   z-index: 12;
-  margin-top: -50px;
+  margin-top: -3.5rem;
 }
 .one{
 background: linear-gradient(
@@ -96,7 +102,7 @@ background: linear-gradient(
   #E50914 50%,
   #B347B3 100%
 );
-  margin-top: -50px;
+  
 }
 .two{
     border-bottom: none;
@@ -107,4 +113,156 @@ background: linear-gradient(
     ),
     black;
   margin-top: -96px;
+}
+
+.movies{
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  gap: 1rem;
+}
+.movies::webkit-scrollbar{
+  display: none;
+}
+.movie {
+  flex: 0 0 auto;
+  width: 7.5rem;                
+  height: 9.5rem;
+  background: gray;
+  border-radius: 6px;
+}
+
+.trending .m-one {
+  background-image: url("assets/to-kill-a-monkey.jpeg");
+  background-size: cover;      
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;        
+}
+
+.trending .m-two {
+  background-image: url("assets/wednesday.jpeg");
+  background-size: cover;      
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;        
+}
+
+.trending .m-three {
+  background-image: url("assets/devil.jpeg");
+  background-size: cover;      
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;        
+}
+
+.trending .m-four {
+  background-image: url("assets/fatal.jpeg");
+  background-size: cover;      
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;        
+}
+.trending .m-five {
+  background-image: url("assets/fast.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+.trending .m-six {
+  background-image: url("assets/bonapetit.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+.trending .m-seven {
+  background-image: url("assets/kpop.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.reasons{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0.5rem;
+}
+.reason{
+  padding: 1rem;
+  background: powderblue;
+  height: 13rem;
+  border-radius: 1rem;
+  
+}
+
+.reason h3{
+  margin: 0.5rem 0;
+}
+
+.question{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: grey;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  align-items: center;
+}
+.last{
+  margin-bottom: 0;
+}
+.question span{
+  font-size: 2rem;
+  font-weight: 300;
+}
+.cta p{
+  margin-bottom: 1rem;
+}
+.cta button{
+  margin: 1rem 0;
+}
+
+footer{
+  margin: 3rem 1rem 20rem 1rem;
+}
+
+.contact {
+  color: grey;
+  margin-bottom: 3rem;
+}
+
+.contact{
+  font-size: 1.1rem;
+}
+
+.items{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+.language{
+  margin-top: 3rem ;
+  padding: 0.5rem;
+  border: 1px solid white;
+  border-radius: 2px;
+  width: 6rem;
+  text-align: center;
+}
+
+.netflixng{
+  color: grey;
+  margin: 2.7rem 0;
+}
+.captcha{
+  font-size: 0.8rem;
+  color: darkgray;
+}
+.captcha a{
+  color: royalblue;
 }
