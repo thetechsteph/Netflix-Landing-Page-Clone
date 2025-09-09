@@ -1,36 +1,51 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   color: white;
-  font-family:  'Arial', Helvetica, sans-serif;
+  font-family: 'Arial', Helvetica, sans-serif;
   background: black;
 }
-button{
+
+button {
   color: white;
   background: #E50914;
   border: none;
   border-radius: 3px;
   font-weight: bold;
 }
-h2{
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
   font-size: 1rem;
   line-height: 1rem;
   margin-bottom: 1rem;
 }
-section{
+
+input {
+  color: grey;
+  font-size: 1rem;
+  border: 1px solid grey;
+}
+
+section {
   padding: 1rem;
   margin-top: 3rem;
 }
-a{
-  color: grey;
+
+a {
+  color: #999999;
 }
+
 header {
-    background: 
-    linear-gradient(
+  background: linear-gradient(
       to top,
       rgba(0, 0, 0, 0.8) 0%,
       rgba(0, 0, 0, 0.7) 60%,
@@ -42,70 +57,71 @@ header {
   overflow: hidden;
 }
 
-
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   padding: 2rem;
   z-index: 2;
-
 }
 
-
-.header button{
+.header button {
   padding: 0.4rem 1rem;
 }
 
-.logo{
+.logo {
   width: 5rem;
 }
 
-.placeholder{
+.placeholder {
   text-align: center;
-  padding: 3rem 3rem 4rem 3rem ;
+  padding: 3rem;
 }
 
-.ready p{
-  margin: 1.5rem 0;
+.email {
+  text-wrap: wrap;
 }
 
-.email input{
+.ready p {
+  margin: 1.2rem 0;
+}
+
+.email input {
   padding: 0.8rem;
   background: none;
-  border: 1px solid white;
   border-radius: 3px;
   width: 100%;
 }
 
-.email button{
-  margin: 1.5rem;
+.email button {
+  margin: 1rem 0 3rem 0;
   padding: 0.8rem 1.5rem;
   font-size: 1.1rem;
 }
 
-.curve{
+.curve {
   clip-path: ellipse(100% 100% at 50% 100%);
   padding: 50px;
   z-index: 10;
   position: relative;
 }
 
-.trending{
+.trending {
   position: relative;
   z-index: 12;
-  margin-top: -3.5rem;
+  margin-top: -4rem;
 }
-.one{
-background: linear-gradient(
-  to right,
-  #B347B3 0%,
-  #E50914 50%,
-  #B347B3 100%
-);
-  
+
+.one {
+  background: linear-gradient(
+    to right,
+    #B347B3 0%,
+    #E50914 50%,
+    #B347B3 100%
+  );
 }
-.two{
-    border-bottom: none;
+
+.two {
+  border-bottom: none;
   background: radial-gradient(
       100% 500% at 50% -400%,
       rgba(64, 97, 231, 0.4) 80%,
@@ -115,7 +131,7 @@ background: linear-gradient(
   margin-top: -96px;
 }
 
-.movies{
+.movies {
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
@@ -123,48 +139,52 @@ background: linear-gradient(
   scrollbar-width: none;
   gap: 1rem;
 }
-.movies::webkit-scrollbar{
+
+.movies::-webkit-scrollbar {
   display: none;
 }
+
 .movie {
   flex: 0 0 auto;
-  width: 7.5rem;                
+  width: 7.5rem;
   height: 9.5rem;
   background: gray;
   border-radius: 6px;
+  position: relative;
 }
 
 .trending .m-one {
   background-image: url("assets/to-kill-a-monkey.jpeg");
-  background-size: cover;      
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 10px;        
+  border-radius: 10px;
 }
 
 .trending .m-two {
   background-image: url("assets/wednesday.jpeg");
-  background-size: cover;      
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 10px;        
+  border-radius: 10px;
 }
 
 .trending .m-three {
   background-image: url("assets/devil.jpeg");
-  background-size: cover;      
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 10px;        
+  border-radius: 10px;
 }
 
 .trending .m-four {
   background-image: url("assets/fatal.jpeg");
-  background-size: cover;      
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 10px;        
+  border-radius: 10px;
 }
+
 .trending .m-five {
   background-image: url("assets/fast.jpeg");
   background-size: cover;
@@ -172,6 +192,7 @@ background: linear-gradient(
   background-repeat: no-repeat;
   border-radius: 10px;
 }
+
 .trending .m-six {
   background-image: url("assets/bonapetit.jpeg");
   background-size: cover;
@@ -179,6 +200,7 @@ background: linear-gradient(
   background-repeat: no-repeat;
   border-radius: 10px;
 }
+
 .trending .m-seven {
   background-image: url("assets/kpop.jpeg");
   background-size: cover;
@@ -187,67 +209,95 @@ background: linear-gradient(
   border-radius: 10px;
 }
 
-.reasons{
+.outline-text {
+  font-family: 'Impact', 'Anton', sans-serif; 
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.6);
+  -webkit-text-stroke: 2px white;
+  letter-spacing: 2px;
+  position: absolute;
+  bottom: 0.1px;
+  left: 0.1px;
+  margin: 0;
+}
+
+.reasons {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 0.5rem;
 }
-.reason{
+
+.reason {
   padding: 1rem;
-  background: powderblue;
+  background: linear-gradient(160deg, #0c0c2d 0%, #1a0f1f 40%, #0d0715 100%);
   height: 13rem;
   border-radius: 1rem;
-  
+  position: relative;
 }
 
-.reason h3{
+.reason h3 {
   margin: 0.5rem 0;
 }
 
-.question{
+.reason i {
+  position: absolute;
+  font-size: 3rem;
+  bottom: 1rem;
+  right: 1rem;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 
+    0 0 10px rgba(130, 0, 200, 0.6),
+    0 0 20px rgba(255, 95, 158, 0.8),
+    0 0 35px rgba(229, 9, 20, 0.7);
+}
+
+.question {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  background: grey;
+  background: #2D2D2D;
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
   align-items: center;
 }
-.last{
+
+.last {
   margin-bottom: 0;
 }
-.question span{
+
+.question span {
   font-size: 2rem;
   font-weight: 300;
 }
-.cta p{
+
+.cta p {
   margin-bottom: 1rem;
 }
-.cta button{
+
+.cta button {
   margin: 1rem 0;
 }
 
-footer{
+footer {
   margin: 3rem 1rem 20rem 1rem;
 }
 
 .contact {
-  color: grey;
   margin-bottom: 3rem;
-}
-
-.contact{
   font-size: 1.1rem;
 }
 
-.items{
+.items {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
 }
 
-.language{
-  margin-top: 3rem ;
+.language {
+  margin-top: 3rem;
   padding: 0.5rem;
   border: 1px solid white;
   border-radius: 2px;
@@ -255,14 +305,108 @@ footer{
   text-align: center;
 }
 
-.netflixng{
-  color: grey;
+.netflixng {
+  color: darkgray;
   margin: 2.7rem 0;
 }
-.captcha{
+
+.captcha {
   font-size: 0.8rem;
-  color: darkgray;
+  color: grey;
 }
-.captcha a{
+
+.captcha a {
   color: royalblue;
+}
+
+
+
+@media (min-width: 769px) {
+  h1{
+    font-size: 3rem;
+    padding: 0 5rem;
+  }
+  h2{
+    font-size: 1.5rem;
+  }
+  section{
+    margin-top: 4rem;
+  }
+  .logo{
+    width: 9rem;
+  }
+  .header{
+    margin: 0 3rem;
+  }
+  .placeholder{
+    padding: 7rem;
+  }
+  .ready input{
+    width: 50%;
+  }
+  .ready p{
+    padding:0 9rem;
+  }
+  .trending h2{
+    padding-top: 1.5rem;
+  }
+  .movies{
+    margin-top: 1.5rem;
+  }
+  .movie{
+    width: 10rem;
+    height: 12rem;
+  }
+  .outline-text{
+    font-size: 5rem;
+  }
+  .main{
+    padding: 0 4rem;
+  }
+  .reasons{
+    grid-template-columns: repeat(2, 2fr);
+    margin-top: 1.5rem;
+  }
+  .question{
+    padding: 1.5rem ;
+    font-size: 1.5rem;
+  }
+  .cta{
+    text-align: center;
+  }
+  .cta input{
+    width: 50%;
+  }
+  .items{
+    grid-template-columns: repeat(3,3fr);
+  }
+  footer{
+    padding: 4rem;
+  }
+}
+
+
+@media (min-width: 600px) and (max-width: 768) {
+  h1 {
+    font-size: 2.5rem;
+    padding: 0 3rem;  
+  }
+  .cta input, .ready input{
+    width: 50%;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .placeholder {
+    padding: 4rem; 
+  }
+
+  .ready p {
+    padding: 0 5rem;
+  }
+  .cta{
+    text-align: center;
+  }
 }
