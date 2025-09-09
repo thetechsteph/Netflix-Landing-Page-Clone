@@ -386,7 +386,7 @@ footer {
 }
 
 
-@media (min-width: 600px) and (max-width: 768) {
+@media (min-width: 600px) and (max-width: 768px) {
   h1 {
     font-size: 2.5rem;
     padding: 0 3rem;  
