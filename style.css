@@ -225,14 +225,14 @@ header {
   border-radius: 10px;
 }
 .trending .m-nine {
-  background-image: url("assets/war.jpeg");
+  background-image: url("assets/beauty.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 10px;
 }
 .trending .m-ten {
-  background-image: url("assets/beauty.jpeg");
+  background-image: url("assets/war.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -289,25 +289,47 @@ header {
     0 0 35px rgba(229, 9, 20, 0.7);
 }
 
-.question {
+.question summary {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
   background: #2D2D2D;
-  margin-bottom: 0.5rem;
   font-size: 1.2rem;
   align-items: center;
+}
+.questions{
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
 }
 
 .last {
   margin-bottom: 0;
 }
 
-.question span {
+summary span {
   font-size: 2rem;
   font-weight: 300;
 }
+details[open] summary::after {
+    content: 'x';
+    font-size: 1.6rem;
+}
+details[open] span{
+  display: none;
+}
+details[open] summary{
+  margin-bottom: 1px;
+}
 
+.faq-content{
+  padding: 1rem;
+  background: #2D2D2D;
+  margin-top: 0;
+}
+.faq-content p{
+  font-size: 1.2rem;
+}
 .cta p {
   margin-bottom: 1rem;
 }
@@ -408,7 +430,7 @@ footer {
     grid-template-columns: repeat(2, 2fr);
     margin-top: 1.5rem;
   }
-  .question{
+  .question summary{
     padding: 1.5rem ;
     font-size: 1.5rem;
   }
