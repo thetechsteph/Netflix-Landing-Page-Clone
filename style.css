@@ -17,7 +17,10 @@ button {
   border-radius: 3px;
   font-weight: bold;
 }
-
+  
+button i{
+  margin-left: 1rem;
+}
 h1 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
@@ -30,7 +33,7 @@ h2 {
 }
 
 input {
-  color: grey;
+  color: white;
   font-size: 1rem;
   border: 1px solid grey;
 }
@@ -87,7 +90,7 @@ header {
 
 .email input {
   padding: 0.8rem;
-  background: none;
+  background: rgba(0, 0, 0, 0.9);
   border-radius: 3px;
   width: 100%;
 }
@@ -152,6 +155,12 @@ header {
   border-radius: 6px;
   position: relative;
 }
+.movie img{
+  position: absolute;
+  top: 1px;
+  left:0.5rem;
+  width: 0.5rem;
+}
 
 .trending .m-one {
   background-image: url("assets/to-kill-a-monkey.jpeg");
@@ -208,6 +217,28 @@ header {
   background-repeat: no-repeat;
   border-radius: 10px;
 }
+.trending .m-eight {
+  background-image: url("assets/fall.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+.trending .m-nine {
+  background-image: url("assets/war.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+.trending .m-ten {
+  background-image: url("assets/beauty.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
 
 .outline-text {
   font-family: 'Impact', 'Anton', sans-serif; 
@@ -215,7 +246,7 @@ header {
   font-weight: 900;
   color: rgba(0, 0, 0, 0.6);
   -webkit-text-stroke: 2px white;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   position: absolute;
   bottom: 0.1px;
   left: 0.1px;
@@ -234,6 +265,10 @@ header {
   height: 13rem;
   border-radius: 1rem;
   position: relative;
+}
+
+.reason p{
+  color: lightgrey;
 }
 
 .reason h3 {
@@ -282,12 +317,12 @@ header {
 }
 
 footer {
-  margin: 3rem 1rem 20rem 1rem;
+  margin: 3rem 1rem 10rem 1rem;
 }
 
 .contact {
   margin-bottom: 3rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .items {
@@ -295,12 +330,15 @@ footer {
   grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
 }
+.items a{
+  font-size: 0.8rem;
+}
 
 .language {
   margin-top: 3rem;
   padding: 0.5rem;
-  border: 1px solid white;
-  border-radius: 2px;
+  border: 1px solid grey;
+  border-radius: 3px;
   width: 6rem;
   text-align: center;
 }
@@ -356,6 +394,9 @@ footer {
   .movie{
     width: 10rem;
     height: 12rem;
+  }
+  .movie img{
+    width: 1rem;
   }
   .outline-text{
     font-size: 5rem;
