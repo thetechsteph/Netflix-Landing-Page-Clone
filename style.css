@@ -8,6 +8,7 @@ body {
   color: white;
   font-family: 'Arial', Helvetica, sans-serif;
   background: black;
+  scroll-behavior: smooth;
 }
 
 button {
@@ -155,6 +156,7 @@ header {
   border-radius: 6px;
   position: relative;
 }
+
 .movie img{
   position: absolute;
   top: 1px;
@@ -310,13 +312,11 @@ header {
 summary span {
   font-size: 2rem;
   font-weight: 300;
+  transition: transform 0.3s ease;
 }
-details[open] summary::after {
-    content: 'x';
-    font-size: 1.6rem;
-}
+
 details[open] span{
-  display: none;
+  transform: rotate(45deg);
 }
 details[open] summary{
   margin-bottom: 1px;
@@ -378,7 +378,22 @@ footer {
 .captcha a {
   color: royalblue;
 }
-
+.disclaimer-top{
+  background: #ffcc00; color: #000; padding: 10px; text-align: center; font-weight: bold;
+  margin-top: 2rem;
+  animation: fadeOut 6s forwards;
+}
+.disclaimer{
+  background: #ffcc00; color: #000; padding: 10px; text-align: center; font-weight: bold;
+  margin-top: 2rem;
+}
+@keyframes fadeOut{
+  0% { opacity: 1; }
+  25% { opacity: 0.5; }
+  50% { opacity: 1; }
+  75% { opacity: 0.5; }
+  100% { display: none;}
+}
 
 
 @media (min-width: 769px) {
